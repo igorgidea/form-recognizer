@@ -19,11 +19,12 @@ app.get('/', async (req, res) => {
 
 // GET Analyze Form with AXIOS
 app.get('/recognize-form-2', async (req, res) => {
+  const apiKey = process.env["FORM_RECOGNIZER_API_KEY"];
   const END_POINT_URL = process.env["FORM_RECOGNIZER_ENDPOINT"];
   try {
     const config = {
       headers: {
-        'Ocp-Apim-Subscription-Key': '954c3fe2a0a846658b2f7a482aaf0188',
+        'Ocp-Apim-Subscription-Key': apiKey,
         'Content-Type': 'image/jpeg'
       },
     }
@@ -45,12 +46,12 @@ app.get('/recognize-form-2', async (req, res) => {
 
 // Get Analyze Form Result with AXIOS
 app.get('/recognize-form-3', async (req, res) => {
-
+  const apiKey = process.env["FORM_RECOGNIZER_API_KEY"];
   const END_POINT_URL_RESULT = process.env["FORM_RECOGNIZER_ENDPOINT_RESULT"];
   try {
     const config = {
       headers: {
-        'Ocp-Apim-Subscription-Key': '954c3fe2a0a846658b2f7a482aaf0188',
+        'Ocp-Apim-Subscription-Key': apiKey,
       },
     }
     const response = await axios.get(END_POINT_URL_RESULT, config);
