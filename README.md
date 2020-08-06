@@ -10,6 +10,6 @@ Before start to working:
 - FORM_RECOGNIZER_API_KEY=
 - UNLABELED_CUSTOM_MODEL_ID=
 
-Then run `**npm install**` command to install packageg. To start server run `**npm start**` command.
+Then run `npm install` command to install packages. To start server run `npm start` command.
 
 
